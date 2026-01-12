@@ -1,0 +1,223 @@
+/**
+ * Community Engagement Section
+ * Speaking, Review Committee, Volunteer
+ */
+
+.community {
+  padding: var(--spacing-3xl) var(--spacing-md);
+  background: var(--color-background);
+}
+
+.community__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.community__header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.community__title {
+  font-size: var(--font-size-4xl);
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.community__title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 2px;
+  margin: var(--spacing-md) auto 0;
+}
+
+.community__description {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-light);
+  margin-top: var(--spacing-md);
+}
+
+/* Subsection */
+.community__subsection {
+  margin-bottom: var(--spacing-3xl);
+}
+
+.community__subsection:last-child {
+  margin-bottom: 0;
+}
+
+.community__subtitle {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-xl);
+}
+
+.community__subtitle-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: var(--border-radius-md);
+  color: white;
+  font-size: var(--font-size-xl);
+}
+
+/* Speaking Engagements */
+.community__speaking-list {
+  display: grid;
+  gap: var(--spacing-lg);
+}
+
+.community__speaking-item {
+  display: flex;
+  gap: var(--spacing-lg);
+  background: white;
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-fast);
+}
+
+.community__speaking-item:hover {
+  box-shadow: var(--shadow-md);
+  border-color: #667eea50;
+}
+
+.community__speaking-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: var(--spacing-md);
+  background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+  border-radius: var(--border-radius-md);
+  text-align: center;
+}
+
+.community__speaking-month {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: #667eea;
+  text-transform: uppercase;
+}
+
+.community__speaking-year {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-light);
+}
+
+.community__speaking-info {
+  flex: 1;
+}
+
+.community__speaking-title {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-xs);
+}
+
+.community__speaking-event {
+  font-size: var(--font-size-base);
+  color: #667eea;
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+}
+
+.community__speaking-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+}
+
+.community__speaking-type {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background: var(--color-surface);
+  border-radius: var(--border-radius-sm);
+  font-weight: 600;
+}
+
+/* Review Committee & Volunteer */
+.community__role-list {
+  display: grid;
+  gap: var(--spacing-lg);
+}
+
+.community__role-item {
+  background: white;
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-fast);
+}
+
+.community__role-item:hover {
+  box-shadow: var(--shadow-md);
+  border-color: #667eea50;
+}
+
+.community__role-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-sm);
+}
+
+.community__role-title {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.community__role-period {
+  font-size: var(--font-size-sm);
+  color: #667eea;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.community__role-org {
+  font-size: var(--font-size-base);
+  color: var(--color-text-light);
+  font-weight: 500;
+  margin-bottom: var(--spacing-sm);
+}
+
+.community__role-description {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Tablet: 768px+ */
+@media (min-width: 768px) {
+  .community__speaking-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .community__role-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop: 1024px+ */
+@media (min-width: 1024px) {
+  .community__role-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

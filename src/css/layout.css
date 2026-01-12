@@ -1,0 +1,137 @@
+/**
+ * Layout Utilities
+ * Grid, flexbox, containers, and responsive breakpoints
+ */
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Main content wrapper */
+main {
+  min-height: 100vh;
+}
+
+/* Container - centered max-width wrapper */
+.container {
+  width: 100%;
+  max-width: var(--max-width-content);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--spacing-md);
+  padding-right: var(--spacing-md);
+}
+
+/* Section - full-width content block */
+.section {
+  padding-top: var(--spacing-3xl);
+  padding-bottom: var(--spacing-3xl);
+}
+
+/* Section with alternate background */
+.section--alt {
+  background-color: var(--color-surface);
+}
+
+/* Section container - centered content within section */
+.section__container {
+  width: 100%;
+  max-width: var(--max-width-content);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--spacing-md);
+  padding-right: var(--spacing-md);
+}
+
+/* Section title - h2 */
+.section__title {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-2xl);
+  color: var(--color-text);
+  text-align: center;
+}
+
+/* Scroll offset for fixed nav */
+section[id] {
+  scroll-margin-top: var(--nav-height);
+}
+
+/* Grid utilities */
+.grid {
+  display: grid;
+  gap: var(--spacing-lg);
+}
+
+/* Flex utilities */
+.flex {
+  display: flex;
+}
+
+.flex--center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex--between {
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Responsive breakpoints */
+
+/* Tablet: 768px+ */
+@media (min-width: 768px) {
+  .container,
+  .section__container {
+    padding-left: var(--spacing-xl);
+    padding-right: var(--spacing-xl);
+  }
+  
+  .section {
+    padding-top: var(--spacing-3xl);
+    padding-bottom: var(--spacing-3xl);
+  }
+  
+  .section__title {
+    font-size: var(--font-size-4xl);
+  }
+}
+
+/* Desktop: 1024px+ */
+@media (min-width: 1024px) {
+  .container,
+  .section__container {
+    padding-left: var(--spacing-2xl);
+    padding-right: var(--spacing-2xl);
+  }
+}
+
+/* Large desktop: 1280px+ */
+@media (min-width: 1280px) {
+  .section__title {
+    font-size: var(--font-size-5xl);
+  }
+}
+
+/* ==========================================
+   Section Scroll Animations
+   ========================================== */
+
+.section--animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Skip animation for hero - it should be visible immediately */
+#hero.section--animate {
+  opacity: 1;
+  transform: none;
+}

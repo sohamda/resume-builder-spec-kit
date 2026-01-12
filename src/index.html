@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Your Name | Professional Portfolio</title>
+  <meta name="description" content="A professional portfolio showcasing skills, experience, and community engagement.">
+  <link rel="canonical" href="#">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Your Name | Professional Portfolio">
+  <meta property="og:description" content="A professional portfolio showcasing skills, experience, and community engagement.">
+  
+  <!-- FontAwesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+  
+  <!-- Base CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  
+  <!-- Section CSS (modular - each section in separate file) -->
+  <link rel="stylesheet" href="css/sections/hero.css">
+  <link rel="stylesheet" href="css/sections/about.css">
+  <link rel="stylesheet" href="css/sections/expertise.css">
+  <link rel="stylesheet" href="css/sections/experience.css">
+  <link rel="stylesheet" href="css/sections/content.css">
+  <link rel="stylesheet" href="css/sections/community.css">
+  <link rel="stylesheet" href="css/sections/contact.css">
+</head>
+<body>
+  <!-- Skip to main content link (accessibility) -->
+  <a href="#hero" class="skip-link">Skip to main content</a>
+
+  <!-- Header with Navigation -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#hero" class="nav__logo">YN</a>
+      
+      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        <span class="nav__toggle-fallback">☰</span>
+      </button>
+      
+      <ul id="nav-menu" class="nav__menu">
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#expertise" class="nav__link">Expertise</a></li>
+        <li><a href="#experience" class="nav__link">Experience</a></li>
+        <li><a href="#content" class="nav__link">Blogs & Vlogs</a></li>
+        <li><a href="#community" class="nav__link">Community</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section (rendered by js/sections/hero.js) -->
+    <section id="hero" class="hero">
+      <!-- Content dynamically rendered -->
+    </section>
+
+    <!-- About Section (rendered by js/sections/about.js) -->
+    <section id="about" class="about">
+      <!-- Content dynamically rendered -->
+    </section>
+
+    <!-- Technical Expertise & Certifications (rendered by js/sections/expertise.js) -->
+    <section id="expertise" class="expertise">
+      <!-- Content dynamically rendered -->
+    </section>
+
+    <!-- Work Experience (rendered by js/sections/experience.js) -->
+    <section id="experience" class="experience">
+      <!-- Content dynamically rendered -->
+    </section>
+
+    <!-- Blogs & Vlogs (rendered by js/sections/content.js) -->
+    <section id="content" class="content">
+      <!-- Content dynamically rendered -->
+    </section>
+
+    <!-- Community Engagement (rendered by js/sections/community.js) -->
+    <section id="community" class="community">
+      <!-- Content dynamically rendered -->
+    </section>
+
+    <!-- Contact Section (rendered by js/sections/contact.js) -->
+    <section id="contact" class="contact">
+      <!-- Content dynamically rendered -->
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; 2025 Your Name. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript (ES Modules) -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

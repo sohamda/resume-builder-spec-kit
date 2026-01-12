@@ -1,0 +1,263 @@
+/**
+ * Content Section Styles
+ * About, Experience, Skills, Education, and Contact sections
+ */
+
+/* ===== ABOUT SECTION ===== */
+.about__text {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-light);
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ===== EXPERIENCE SECTION ===== */
+.experience-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.experience-item {
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-xl);
+  margin-bottom: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Hidden items (before "View More" click) */
+.experience-item[data-visible="false"] {
+  display: none;
+}
+
+.experience-item__header {
+  margin-bottom: var(--spacing-md);
+}
+
+.experience-item__role {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-xs);
+}
+
+.experience-item__company {
+  display: block;
+  font-size: var(--font-size-base);
+  color: var(--color-primary);
+  font-weight: 500;
+  margin-bottom: var(--spacing-xs);
+}
+
+.experience-item__dates {
+  display: block;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+}
+
+.experience-item__bullets {
+  padding-left: var(--spacing-lg);
+}
+
+.experience-item__bullets li {
+  position: relative;
+  margin-bottom: var(--spacing-sm);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-light);
+}
+
+.experience-item__bullets li::before {
+  content: '•';
+  position: absolute;
+  left: calc(-1 * var(--spacing-md));
+  color: var(--color-primary);
+}
+
+/* View More button container */
+.experience__toggle-container {
+  text-align: center;
+  margin-top: var(--spacing-lg);
+}
+
+/* ===== SKILLS SECTION ===== */
+.skills-grid {
+  display: grid;
+  gap: var(--spacing-2xl);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.skill-category {
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.skill-category__title {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.skill-list {
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+.skill-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-sm) 0;
+}
+
+.skill-item__name {
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+}
+
+.skill-item__rating {
+  display: flex;
+  gap: var(--spacing-xs);
+  color: var(--color-star-filled);
+}
+
+.skill-item__rating .fa-regular {
+  color: var(--color-star-empty);
+}
+
+/* Hide Unicode fallback when FontAwesome loads */
+.skill-item__rating .fa-star ~ .skill-item__rating-fallback,
+.skill-item__rating .fa-regular ~ .skill-item__rating-fallback {
+  display: none;
+}
+
+.skill-item__rating-fallback {
+  letter-spacing: 2px;
+}
+
+/* ===== EDUCATION SECTION ===== */
+.education-list {
+  display: grid;
+  gap: var(--spacing-lg);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.education-item {
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-xl);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.education-item__institution {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-xs);
+}
+
+.education-item__degree {
+  font-size: var(--font-size-base);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.education-item__year {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact__content {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact__email {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: var(--font-size-xl);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-2xl);
+  transition: color var(--transition-fast);
+}
+
+.contact__email:hover {
+  color: var(--color-primary-dark);
+  text-decoration: none;
+}
+
+/* Hide fallback when FA loads */
+.contact__email .fa-envelope ~ .contact__email-fallback {
+  display: none;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-surface);
+  border-radius: var(--border-radius-full);
+  font-size: var(--font-size-xl);
+  color: var(--color-text);
+  transition: all var(--transition-fast);
+}
+
+.social-link:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+/* Hide fallback when FA loads */
+.social-link .fa-brands ~ .social-link__fallback,
+.social-link .fa-solid ~ .social-link__fallback {
+  display: none;
+}
+
+.social-link__fallback {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
+
+/* ===== RESPONSIVE: Tablet 768px+ ===== */
+@media (min-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .education-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===== RESPONSIVE: Desktop 1024px+ ===== */
+@media (min-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

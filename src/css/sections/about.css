@@ -1,0 +1,112 @@
+/**
+ * About Section Styles
+ * Clean layout with highlight stats
+ */
+
+.about {
+  padding: var(--spacing-3xl) var(--spacing-md);
+  background: var(--color-background);
+}
+
+.about__container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about__header {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.about__title {
+  font-size: var(--font-size-4xl);
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-md);
+  position: relative;
+  display: inline-block;
+}
+
+.about__title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 2px;
+}
+
+.about__content {
+  display: grid;
+  gap: var(--spacing-2xl);
+}
+
+.about__text {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-light);
+}
+
+.about__text p {
+  margin-bottom: var(--spacing-lg);
+}
+
+.about__text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Highlight Stats */
+.about__highlights {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+}
+
+.about__highlight {
+  text-align: center;
+  padding: var(--spacing-xl);
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ed 100%);
+  border-radius: var(--border-radius-lg);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.about__highlight:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.about__highlight-icon {
+  font-size: var(--font-size-2xl);
+  color: #667eea;
+  margin-bottom: var(--spacing-sm);
+}
+
+.about__highlight-value {
+  font-size: var(--font-size-3xl);
+  font-weight: 800;
+  color: var(--color-text);
+  line-height: 1;
+  margin-bottom: var(--spacing-xs);
+}
+
+.about__highlight-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Tablet: 768px+ */
+@media (min-width: 768px) {
+  .about__highlights {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .about__content {
+    padding: 0 var(--spacing-xl);
+  }
+}

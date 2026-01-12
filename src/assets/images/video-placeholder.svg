@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" width="320" height="180">
+  <defs>
+    <linearGradient id="videoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="320" height="180" rx="8" fill="url(#videoGrad)"/>
+  <!-- Play button circle -->
+  <circle cx="160" cy="90" r="30" fill="#ffffff" opacity="0.9"/>
+  <!-- Play triangle -->
+  <polygon points="150,75 175,90 150,105" fill="#667eea"/>
+  <!-- Video indicator lines -->
+  <rect x="20" y="150" width="60" height="4" rx="2" fill="#ffffff" opacity="0.5"/>
+  <rect x="90" y="150" width="40" height="4" rx="2" fill="#ffffff" opacity="0.3"/>
+  <!-- Decorative elements -->
+  <circle cx="30" cy="30" r="15" fill="#ffffff" opacity="0.2"/>
+  <circle cx="290" cy="150" r="20" fill="#ffffff" opacity="0.1"/>
+</svg>

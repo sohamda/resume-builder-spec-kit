@@ -2,6 +2,8 @@
 
 A modern, fancy single-page portfolio website with a **modular section-based architecture** built with vanilla JavaScript, HTML5, and CSS3.
 
+![Portfolio Demo](src/assets/images/screen_record.gif)
+
 ## 🚀 Features
 
 - **Modular Architecture**: Each section in its own CSS/JS file for easy updates
